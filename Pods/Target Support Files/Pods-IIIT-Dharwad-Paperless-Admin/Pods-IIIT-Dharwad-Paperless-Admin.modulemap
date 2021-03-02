@@ -1,0 +1,6 @@
+framework module Pods_IIIT_Dharwad_Paperless_Admin {
+  umbrella header "Pods-IIIT-Dharwad-Paperless-Admin-umbrella.h"
+
+  export *
+  module * { export * }
+}
