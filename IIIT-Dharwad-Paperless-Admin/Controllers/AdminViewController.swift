@@ -12,14 +12,28 @@ class AdminViewController: UIViewController {
 
     private var tableView: UITableView!
     private var docs = [Admin]()
+//    var filteredArray = [Admin]()
+//    var searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
         
-        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height),style: .insetGrouped)
+        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.height
+        let navBarHeight: CGFloat = self.navigationController?.navigationBar.frame.height ?? 0
+        let tabBarHeight: CGFloat = self.tabBarController?.tabBar.frame.height ?? 0
+        
+        tableView = UITableView(frame: CGRect(x: 0, y: barHeight + navBarHeight, width: view.frame.width, height: view.frame.height - tabBarHeight),style: .insetGrouped)
         tableView.register(AdminTableViewCell.self, forCellReuseIdentifier: AdminTableViewCell.identifier)
+        tableView.keyboardDismissMode = .onDrag
+//        searchController.obscuresBackgroundDuringPresentation = false
+//        searchController.searchBar.showsCancelButton = false
+//        searchController.searchBar.showsScopeBar = true
+//        searchController.searchResultsUpdater = self
+//        searchController.searchBar.scopeButtonTitles = ["All", "Awaiting response", "Accepted", "Rejected", "Not submitted"]
+//        searchController.searchBar.delegate = self
+//        tableView.tableHeaderView = searchController.searchBar
         
         view.addSubview(tableView)
         
@@ -97,3 +111,26 @@ extension AdminViewController: UITableViewDelegate, UITableViewDataSource{
         ])
     }
 }
+//extension AdminViewController: UISearchResultsUpdating, UISearchBarDelegate {
+//    func updateSearchResults(for searchController: UISearchController) {
+//        let searchBar = searchController.searchBar
+//        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+//        filterContentsforSearchText(searchText: searchController.searchBar.text!, scope: scope)
+//    }
+//    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+//        searchController.isActive = true
+//        filterContentsforSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+//    }
+//    func filterContentsforSearchText(searchText: String, scope: String = "All"){
+//
+//        filteredArray = docs.filter { filter in
+//            let categoryMatch = (scope == "All") || (filter.stat == scope)
+//            if searchText.isEmpty {
+//                return categoryMatch
+//            }
+//            return categoryMatch && filter.email.lowercased().contains(searchText.lowercased())
+//        }
+//
+//        tableView.reloadData()
+//    }
+//}

@@ -33,7 +33,7 @@ class LoginCollectionViewCell: UICollectionViewCell {
         super .init(frame: frame)
         contentView.addSubview(loginImage)
         contentView.addSubview(googleButton)
-        contentView.addSubview(adminButton)
+//        contentView.addSubview(adminButton)
     }
     
     required init?(coder: NSCoder) {
@@ -50,9 +50,9 @@ class LoginCollectionViewCell: UICollectionViewCell {
         googleButton.leadingAnchor.constraint(equalTo: loginImage.trailingAnchor, constant: 20).isActive = true
         googleButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
         
-        adminButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
-        adminButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant:10).isActive = true
-        adminButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant:-10).isActive = true
+//        adminButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+//        adminButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant:10).isActive = true
+//        adminButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant:-10).isActive = true
     }
     
 }

@@ -103,6 +103,16 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		4F0A4C5D25EE0F06008F8E55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4FC9103825E39E6D001B4C6A /* SceneDelegate.swift */,
+				4FC9103625E39E6D001B4C6A /* AppDelegate.swift */,
+				4FC9103F25E39E6E001B4C6A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4FC9102A25E39E6D001B4C6A = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				4F0A4C2725ECB46B008F8E55 /* GoogleService-Info.plist */,
-				4FC9103625E39E6D001B4C6A /* AppDelegate.swift */,
-				4FC9103825E39E6D001B4C6A /* SceneDelegate.swift */,
-				4FC9103F25E39E6E001B4C6A /* Assets.xcassets */,
+				4F0A4C5D25EE0F06008F8E55 /* Resources */,
 				4F0A4BEA25ECA8D7008F8E55 /* Managers */,
-				4F0A4BE125ECA58A008F8E55 /* View Models */,
 				4F0A4BDF25ECA584008F8E55 /* Models */,
 				4FC9107F25E3A1A6001B4C6A /* Views */,
+				4F0A4BE125ECA58A008F8E55 /* View Models */,
 				4FC9107E25E3A19D001B4C6A /* Controllers */,
 				4FC9104125E39E6E001B4C6A /* LaunchScreen.storyboard */,
 				4FC9104425E39E6E001B4C6A /* Info.plist */,

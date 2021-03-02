@@ -89,7 +89,7 @@ extension LoginViewController {
     @objc func didTapAdmin(){
         let vc = UINavigationController(rootViewController: AdminViewController())
         vc.title = "Admin"
-//        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
     

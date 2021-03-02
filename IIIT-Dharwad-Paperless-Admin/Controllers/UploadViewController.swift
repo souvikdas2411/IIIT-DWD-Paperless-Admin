@@ -44,6 +44,10 @@ class UploadViewController: UIViewController {
         doc2.textContentType = .URL
         doc3.textContentType = .URL
         
+        doc1.autocapitalizationType = .none
+        doc2.autocapitalizationType = .none
+        doc3.autocapitalizationType = .none
+        
         sbtButton = UIButton(frame: CGRect(x: view.frame.width - 110, y: doc3.frame.maxY + 15, width: 100, height: 36))
         sbtButton.setTitle("Submit", for: .normal)
         sbtButton.backgroundColor = .black
