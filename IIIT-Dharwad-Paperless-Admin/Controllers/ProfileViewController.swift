@@ -40,8 +40,9 @@ class ProfileViewController: UIViewController {
     
     @objc func didTapSignOut(){
         GIDSignIn.sharedInstance()?.signOut()
-        let vc = LoginViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        dismiss(animated: true)
+//        let vc = LoginViewController()
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
     }
 }
